@@ -1,0 +1,43 @@
+{
+  "name": "@shimoning/vue-tag-input",
+  "version": "0.1.0",
+  "description": "VueJS input element of tags, labels or keywords",
+  "author": "Shimon Haga",
+  "license": "MIT",
+  "keywords": [
+    "vue",
+    "javascript",
+    "web",
+    "front-end",
+    "input",
+    "tag",
+    "label",
+    "keyword"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shimoning/vue-tag-input.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shimoning/vue-tag-input/issues"
+  },
+  "homepage": "https://github.com/shimoning/vue-tag-input#readme",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint -c .eslintrc.json --ext .js src --quiet"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "@vue/cli": "^4.5.11",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.21.0",
+    "eslint-plugin-jest": "^24.4.2",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.18.0",
+    "jest": "^26.6.3",
+    "vue": "^2.3.4"
+  },
+  "dependencies": {}
+}

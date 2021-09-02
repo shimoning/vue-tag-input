@@ -1,5 +1,10 @@
 <template>
   <div class="tag-input">
+    <input
+      type="hidden"
+      :name="name"
+      :value="tags.map(t => t.name || t.value || '*').join(separator)"
+    />
     <Tags
       :tags="tags"
       @remove-tag="handleRemoveTag"
@@ -17,6 +22,10 @@ import Editor from './elements/editor.vue'
 export default {
   components: { Tags, Editor },
   props: {
+    name: {
+      type: String,
+      default: 'tags',
+    },
     value: {
       type: String,
       default: '',
@@ -41,7 +50,11 @@ export default {
         this.tags.splice(
           0,
           this.tags.length,
-          ...newVal.split(this.separator),
+          ...newVal.split(this.separator).map((v, i) => ({
+            index: i,
+            name: v,
+            value: v,
+          })),
         )
       }
     },
